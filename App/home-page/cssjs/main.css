@@ -1,0 +1,174 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+  }
+
+  .append-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .append-buttons button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+  .img_box {
+    height: 100%;
+}
+a.time{
+  font-size: 0.8rem;
+  color: var(--light-color-alt);
+}
+a.chap{
+  font-size: 1rem;
+}
+a.time1{
+  font-size: 0.9rem;
+}
+a.chap1{
+  font-size: 1rem;
+}
+h5.card-title{
+  font-size: 1rem;
+}
+@media screen and (max-width: 1400px) {
+  /* CSS cho màn hình lớn */
+  /* #comment {
+      display: none;
+  } */
+  #list{
+    width: 100%;
+  }
+  #men{
+    display: none;
+  }
+  #girl{
+    display: none;
+  }
+ 
+}
+@media screen and (max-width: 1200px) {
+  /* CSS cho màn hình lớn */ 
+  div.default{
+    display: none;
+  }
+  div.sign-in-on{
+    display: none;
+  }
+  div.list-list{
+    display: block;
+  }
+  
+}
+
+div.gird-container{
+  display: grid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  background-color:red;
+  padding: 1rem;
+}
+div.gird-test{
+  text-align: center;
+}
+div.gird-test1{
+  max-width: 9rem;
+}
+div.gird-container1{
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  
+}
+@media screen and (max-width: 800px) {
+  div.gird-container1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    
+  }
+}
+@media screen and (max-width: 600px) {
+  div.gird-container1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    
+  }
+}
+div.gird-test{
+  text-align: center;
+}
+div.gird-test1{
+  max-width: 13rem;
+}
+a.nav-link1{
+  color: #fff;
+}
+a.nav-link1:hover{
+  color: chocolate;
+}
+/* dùng để hiện ẩn mục lục */
+.d-none{
+  display: none;
+}
+a:hover,
+ul:hover,
+li:hover,
+img:hover {
+    cursor: pointer; /* Hoặc bất kỳ kiểu con trỏ nào bạn muốn, ví dụ: cursor: pointer; */
+}
+a.page-link{
+  color: #000;
+}
+

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cssjs/base.css">
+    <link rel="stylesheet" href="./cssjs/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="./cssjs/fonts/fonts-6/fontawesome-free-6.5.1-web/css/all.min.css">
+    <!-- JavaScript mới nhất (yêu cầu jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS mới nhất và được thu gọn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body style="" id="body1">
+
+
+  <!-- tiêu đề  -->
+  <header id="header">
+    <div class="gird-container">
+      <div class="gird-test d-flex align-items-center" style="border: none;"> 
+        <img alt="Logo NetTruyen" src="//st.nettruyenss.com/data/logos/logo-nettruyen.png" width="250" style="aspect-ratio:5">
+        <i id="morning-evening" style="font-size: 1.5rem;margin-left: 1rem;color: #fff;" class="fa-solid fa-lightbulb"></i>
+      </div>
+      <!-- input -->
+      <div class="gird-test" id="" style="width: 50%;">
+        <form action="">
+        <div class="input-group" id="search" style="width: 100%;">
+          <input id=""  style="font-size: var(--font-size-xsm);border: none;" type="text" class="form-control" placeholder="Tên Truyện" name="usrname">
+          <span class="input-group-text"><i style="font-size: var(--font-size-sm);" class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        </form>
+      </div>
+      <!-- đăng kí đăng nhập -->
+      <div class=" gird-test sign-in-on">
+        <li class="nav-item d-flex input " style="font-size: 1.2rem;">
+          <a class="nav-link" href="#">Đăng Kí </a>
+          <a class="nav-link mx-2" href="#">/</a>
+          <a class="nav-link" href="#">Đăng Nhập</a>
+        </li>
+        <!-- avt name -->
+        <li class="nav-item d-flex align-items-center d-none " style="font-size: 1.5rem;">
+          <a class="nav-link" href="#"> <img style="border-radius: 50%;width: 3rem;" src="./cssjs/img/anh1.jpg" alt=""> </a>
+          <a class="nav-link" style="margin-left: 2rem;font-size: 1.2rem;" href="#">Pham Thế Phong</a>
+        </li>  
+      </div>
+      <!-- mục lục -->
+      <div class="gird-test list-list d-none p-0 m-0 d-flex justify-content-center " id="myDiv" style="background-color: rgb(240, 205, 7);min-width: 60px;height: 3rem;border-radius: 2px;">
+        <li class="nav-item d-flex input " style="font-size: 2rem;color: aliceblue;">
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-bars" id="on"></i>
+            <i class="fa-solid fa-xmark d-none" id="out"></i>
+          </a>
+        </li>  
+      </div>
+    </div>
+  </header>
+
+
+
+    <!-- Tìm kiếm theo yêu cầu -->
+    <div class="container-fluid default p-0 " id="" style="">
+      <nav class=" navbar navbar-expand-sm bg-dark navbar-dark p-0">
+          <div class="search p-0 container-fluid d-flex justify-content-between align-items-center" style="background-color: var(--light-color-alt)">
+            <!-- các yêu cầu cho trước -->
+            <ul class="navbar-nav" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();width: 3rem;">
+                <i class="fa-solid fa-house"></i>
+              </div>
+            </ul>
+            <ul class="navbar-nav w-100" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">HOT</div>
+            </ul> 
+            <ul class="navbar-nav w-100" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">THEO DÕI</div>
+            </ul> 
+            <ul class="navbar-nav w-100" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">LỊCH SỬ</div>
+            </ul> 
+            <ul class="navbar-nav w-100" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">THỂ LOẠI</div>
+            </ul> 
+            <ul class="navbar-nav w-100" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">XẾP HẠNG</div>
+            </ul> 
+            <ul class="navbar-nav w-100" style="">
+              <div class="q container-fluid button d-flex  align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">TÌM TRUYỆN</div>
+            </ul> 
+            <ul class="navbar-nav w-100" id="girl" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">TRUYỆN CON GÁI</div>
+            </ul> 
+            <ul class="navbar-nav w-100" id="men" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="height: 3rem; border-color: var();">TRUYỆN CON TRAI</div>
+            </ul> 
+            <ul class="navbar-nav w-100" style="">
+              <div class="q container-fluid button d-flex align-items-center justify-content-center " style="height: 3rem; border-color: var();">TRUYỆN CHỮ HAY</div>
+            </ul>          
+          </div>     
+      </nav>
+    </div>    
+ 
+  
+  
+
+
+    <!-- mục lục -->
+   <body class="" id="" style="">
+    <div class="container-fulid d-none" id="offcanvas" style="background-color: rgb(27, 25, 25);height: 100%;">
+        <div class="container-fluid">
+          <div class="gird-test  pt-2"><form action="">
+            <div class="input-group" style="width: 100%;">
+              <input style="font-size: var(--font-size-xsm);border: none;" type="text" class="form-control" placeholder="Tên Truyện" name="usrname">
+              <span class="input-group-text"><i style="font-size: var(--font-size-sm);" class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+          </form></div>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link nav-link1 mt-4" href="#">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link1" href="#">HOT</a>
+            </li>
+        </div>
+    </div>
+
+
+
+
+     <!-- Swiper -->
+    <div class="container-fluid" id="body-body">
+      <div class="container-fluid mt-3">
+        <h3 class="a4">Đề cử truyện <i class="fa-solid fa-terminal"></i></h3>
+
+        <div class="swiper" style="min-height: 12rem;">
+        
+          <div class="swiper-wrapper">
+
+              <!-- Từng ảnh -->
+            <div class="swiper-slide m-2">
+              <div class="img_box" style="position: relative;height: 96.7%;">
+                <img style="z-index: 1;" src="./cssjs/img/anh1.jpg" alt="">
+                <!-- thông tin truyện -->
+                <div class="container-fluid img-tren" style="position: absolute;height: 4rem;z-index: 5;bottom: 0rem;color: aliceblue;">
+                    <div class="container-flui" style="position: relative;">
+                        <h5 style="position: absolute;">Name</h5>
+                        <ul class="navbar-nav" style="padding-top: 1.2rem;">
+                          <li class="nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link chap1" href="#">Chap 1</a>
+                            <a class="nav-link" style="position: absolute;right: 0;" href="#">29 phút trước</a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!-- thêm các ảnh -->
+             
+            
+            <!-- thêm các ảnh -->
+          
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+       
+  
+
+
+
+       <!-- Truyện -->
+       
+       <div class="container-fluid" style="margin-top: 3rem;">
+        <div class="row">
+          <h3 class="a4">Danh sách truyện <i class="fa-solid fa-terminal"></i></h3>
+          <!-- danh sách truyện -->
+
+          <div id="list" class="col-9 d-flex " style="flex-wrap: wrap;justify-content: space-between;">
+            <div class="container-fluid">
+              <div class="gird-container1" style="">
+
+                <!-- Tùng truyện -->
+                <div class="gird-test1" style="position: relative;">
+                  <div class="boder-img container-fluid p-0" style="position: relative;">
+                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
+                    
+                    <!-- thông tin của truyện về lượt xem ... -->
+                    <div class="container img-duoi d-flex align-items-center" style="position: absolute;bottom: 0;height: 2rem;width: 100%;color: aliceblue;">
+                      <span><i class="fa-solid fa-eye"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
+  
+                    </div>
+                  </div>
+                    <div class="card-body p-0" style="position: relative;">
+                      <h5 class="card-title pt-3 name-dst">John Doe</h5>
+                      <!-- chap truyện -->
+                      <nav class="nav d-flex">
+                        <ul class="navbar-nav" style="display: flex;justify-content:space-between;">
+                          <li class="nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link chap chap-dst" href="#">Chap 1</a>
+                            <a class="nav-link time" style="position: absolute;right: 0;" href="#">29 phút trước</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+                <!-- thêm các truyện -->
+                
+              <!-- thêm các truyện     -->
+              </div>
+              <div class="container-fluid d-flex justify-content-center mt-3 " style="">
+                <ul class="pagination pagination">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </div>
+
+            </div>
+            
+
+            
+         
+              
+          </div>
+
+
+
+
+
+
+          <!-- bình luận -->
+          <div id="comment" class="col-3  text-white" style="height: fit-content;">
+              <!-- Lịch sử dọc truyện -->
+              <div class="container-fluid  boder-coler-2" style="">
+                <div class="container p-2 container-boder1" style="">
+                  <ul class="nav flex-column" >
+                      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                        <li class="nav-item">
+                          <h5 class="a1" style="font-size: 1rem;">Lịch sử đọc truyện</h5>
+                        </li>
+                        <li class="nav-item">
+                          <span class = "span-item" >xem tất cả</span>
+                        </li>
+                      </div>
+                  </ul>
+                </div>
+                <!-- danh sách các truyện -->
+                <div class="container-fluid my-3" style="max-height: 20rem;overflow: auto;">
+                  <ul class="nav flex-column " style="margin-top: 1rem;">
+                    <!-- từng truyện -->
+                    <li class="nav-item">
+                      <div class=" container-fluid d-flex align-items-center p-0" style="background-color: #FFF;color: black;">
+                        <!-- ảnh truyện -->
+                          <div class="" style="width: 4rem;">
+                              <img style="width: 4rem;" src="./cssjs/img/anh1.jpg" alt="">
+                          </div>
+                          <!-- thông tin -->
+                          <div class="container" style="">
+                            <ul class="nav flex-column" >
+                              <li class="nav-item">
+                                Name
+                              </li>
+                              <li class="nav-item">
+                                chap
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- Lượt xem -->
+                          <div class=" d-flex align-items-center" style="color: #0c0c0c;margin-right: 1rem;">
+                            <i class="fa-solid fa-xmark" style="margin-top: 0.4rem;"></i>
+                            <span style="margin-left: 0.3rem;">xóa</span>
+                          </div>
+                      </div>
+                    </li>
+                    <!-- thêm các truyện -->
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+              <!-- Top thành viên -->
+              <div class="container-fluid mt-5  boder-coler-2" style="">
+                <div class="container p-2 container-boder1" style="">
+                  <ul class="nav flex-column" >
+                      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                        <li class="nav-item">
+                          <h5 class="a1" style="font-size: 1rem;">Top các thành viên</h5>
+                        </li>
+                      </div>
+                  </ul>
+                </div>
+                <!-- danh sách các truyện -->
+                <div class="container-fluid my-3" style="max-height: 20rem;overflow: auto;">
+                  <ul class="nav flex-column " style="margin-top: 1rem;">
+                    <!-- từng truyện -->
+                    <li class="nav-item">
+                      <div class=" container-fluid d-flex align-items-center p-0" style="background-color: #FFF;color: black;">
+                        <!-- thứ hạng -->
+                        <div class="container-fluid" style="width: 5rem;">
+                          <div class="container d-flex justify-content-center align-items-center" style="height: 3rem;width: 1rem;">
+                            <span style="font-size: 2rem;">1</span>
+                          </div>
+                        </div>
+                        <!-- ảnh truyện -->
+                          <div class="" style="width: 4rem;">
+                              <img style="width: 4rem;" src="./cssjs/img/anh1.jpg" alt="">
+                          </div>
+                          <!-- thông tin -->
+                          <div class="container">
+                            <ul class="nav flex-column" >
+                              <li class="nav-item" style="" >
+                                Name
+                              </li>
+                              <li class="nav-item">
+                                <div class="m-0 p-0 container-fluid d-flex align-items-center justify-content-center" style="width: 2.5rem;height:1.5rem;border: 1px solid #0c0c0c;border-radius: 2px;">
+                                    <span style="font-size: 0.7rem; color: #0c0c0c;">Cấp 7</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                      </div>
+                    </li>
+                    <!-- thêm các truyện -->
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+              <!-- Top truyện -->
+              <div class="container-fluid mt-5  boder-coler-2" style="">
+                <div class="container p-2 container-boder1" style="">
+                  <ul class="nav flex-column" >
+                      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                        <li class="nav-item">
+                          <h5 class="a1" style="font-size: 1rem;">Top truyện</h5>
+                        </li>
+                        <li class="nav-item">
+                          <span class = "span-item" >xem tất cả</span>
+                        </li>
+                      </div>
+                  </ul>
+                </div>
+                <!-- danh sách các truyện -->
+                <div class="container-fluid my-3" style="max-height: 20rem;overflow: auto;">
+                  <ul class="nav flex-column " style="margin-top: 1rem;">
+                    <!-- từng truyện -->
+                    <li class="nav-item">
+                      <div class=" container-fluid d-flex align-items-center p-0" style="background-color: #FFF;color: black;">
+                        <!-- ảnh truyện -->
+                        <div class="container d-flex justify-content-center align-items-center" style="height: 3rem;width: 3rem;">
+                          <span style="font-size: 2rem;">1</span>
+                        </div>
+                          <div class="" style="width: 4rem;">
+                              <img style="width: 4rem;" src="./cssjs/img/anh1.jpg" alt="">
+                          </div>
+                          <!-- thông tin -->
+                          <div class="container">
+                            <ul class="nav flex-column" >
+                              <li class="nav-item">
+                                Name
+                              </li>
+                              <li class="nav-item">
+                                chap
+                              </li>
+                            </ul>
+                          </div>
+                          <!-- Lượt xem -->
+                          <div class=" d-flex align-items-center" style="color: #0c0c0c;margin-right: 1rem;">
+                            <i class="fa-solid fa-eye" style="margin-top: 0.4rem;"></i>
+                            <span style="margin-left: 0.3rem;"></span>
+                          </div>
+                      </div>
+                    </li>
+                    <!-- thêm các truyện -->
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+              <!-- Bình luận -->
+              <div class="container-fluid my-5 boder-coler-2" style="">
+                <div class="container p-2 container-boder1" style="">
+                  <ul class="nav flex-column" >
+                      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                        <li class="nav-item">
+                          <h5 class="a1" style="font-size: 1rem;">Lịch sử đọc truyện</h5>
+                        </li>
+                        <li class="nav-item">
+                          <span class = "span-item" >xem tất cả</span>
+                        </li>
+                      </div>
+                  </ul>
+                </div>
+                <!-- danh sách các truyện -->
+                <div class="container-fluid my-3" style="max-height: 20rem;">
+                  <ul class="nav flex-column " style="margin-top: 1rem;">
+                    <!-- từng truyện -->
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-15 p-0 m-0" style="background-color: white;color: #0c0c0c;">
+                          <!-- Comment Box -->
+                          <div class="comment-box" style="">
+                            <div class="d-flex " style="position: relative;">
+                              <div> <img style="width: 4rem;height: 4rem;" src="./cssjs/img/anh1.jpg" alt="Avatar" class="comment-avatar"></div>
+                              <div class=" " style="margin-left: 1rem;">
+                                <h6 class="mb-0">John Doe</h6>
+                                <p class="comment-content" style="overflow-wrap: break-word;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio libero.</p>
+                              </div>
+                              <div class=" d-flex align-items-center" style="bottom: 0;right: 0;width: 15%;position: absolute;width: 5rem;">
+                                
+                                <span style="font-size: 0.8rem;">xóa bình luận</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- thêm các truyện -->
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+              
+     
+          </div>
+        </div>
+      </div>
+        
+       
+     </body>
+     
+  
+     <style>
+      /* Custom CSS */
+      
+      
+    </style>
+  </head>
+  <body>
+    
+    <!-- Phần kết thúc -->
+    <footer>
+        
+    </footer>
+  
+  
+  
+  
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./cssjs/man.js">
+
+  </script>
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+         var swiper = new Swiper('.swiper', {
+           slidesPerView: calculateSlidesPerView(), // Số slide hiển thị sẽ được tính toán dựa trên kích thước của màn hình
+           direction: 'horizontal', // Luôn đảm bảo swiper chạy theo chiều ngang
+           navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+           },on: {
+               resize: function () {
+                 swiper.params.slidesPerView = calculateSlidesPerView(); // Cập nhật lại số slide hiển thị khi thay đổi kích thước màn hình
+                 swiper.update(); // Cập nhật swiper để hiển thị số slide mới
+               },
+             },
+           });
+
+           // Tính toán số lượng slide hiển thị dựa trên kích thước của màn hình
+           // tích hợp các loại màn hình vào đây
+           function calculateSlidesPerView() {
+             if (window.innerWidth <= 760) {
+               return 2; // Nếu kích thước màn hình nhỏ hơn hoặc bằng 760px, hiển thị 6 slide
+             } else if(window.innerWidth <= 1200) {
+               return 3; // Ngược lại, hiển thị 9 slide
+             } else {
+              return 5;
+             }
+           }
+   </script>
+
+</body>
+</html>

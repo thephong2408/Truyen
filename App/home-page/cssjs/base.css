@@ -1,0 +1,97 @@
+/* CSS Reset */
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/* Custom properties */
+:root{
+    --light-color: #fff;
+    --nav: #dadde6;
+    --light-color-alt: #afb6cd;
+    --light-color-al: #414244;
+    --primary-background-color: #131417;
+    --secondary-background-color: #252830;
+    --hover-light-color: var(--light-color);
+    --hover-dark-color: var(--primary-background-color);
+    --gradient-color: linear-gradient(
+        115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    --transparent-light-color: rgba(255,255,255,.05);
+    --transparent-dark-color: rgba(0,0,0,.75);
+    --img-tren: rgba(14, 11, 11, 0.841);
+    --img-duoi: rgba(14, 11, 11, 0.774);
+    --font-family: 'Poppins', sans-serif;
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3rem;
+    --font-size-xl: 4rem;
+    --gap: 2rem;
+    --margin-sm: 2rem;
+    --margin-md: 3rem;
+    --item-min-height-sm: 20rem;
+    --item-min-height-md: 30rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    font-size: 62.5%;
+    color: var( --secondary-background-color);
+    font-size: var(--font-size-xsm);
+}
+a.chap{
+    font-size: var(--font-size-sm);
+}
+div.img-tren{
+    background-color: var(--img-tren);
+}
+div.img-duoi{
+    background-color: var(--img-duoi);
+}
+div.q:hover{
+    background-color: var(--nav);
+    color: #a767e5;
+}
+div.gird-test:hover{
+    color: #a767e5;
+}
+/* chỉnh phần bình luận */
+
+div.container-boder1{
+    border-bottom: 2px solid var(--light-color-alt);
+}
+span.span-item{
+    color: var( --secondary-background-color);
+}
+div.boder-coler-2{
+    border: 1px solid var(--light-color-alt);
+}
+
+
+
+/* chuyển trạng thái */
+
+h3.a4{
+    color: #252830;
+}
+h5.a1{
+    color: #252830;
+}
+
+
+
+
+
+
+
+
+
+ div.boder-img{ 
+    border: 1px solid #FFF;;
+}
+
+
+div.swiper-slide{
+    border: 1px solid #fff;
+}   
+
