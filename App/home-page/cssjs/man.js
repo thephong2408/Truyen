@@ -147,6 +147,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// bảng xếp hạng
+document.addEventListener("DOMContentLoaded", function() {
+  const theloaiButton = document.getElementById("xephang");
+  const tableContainer = document.getElementById("table1");
+
+  // Xử lý sự kiện khi click vào #theloai
+  theloaiButton.addEventListener("click", function() {
+      tableContainer.classList.remove("d-none");
+  });
+
+  // Xử lý sự kiện khi click ra ngoài #table
+  document.addEventListener("click", function(event) {
+      if (!tableContainer.contains(event.target) && event.target !== theloaiButton) {
+          tableContainer.classList.add("d-none");
+      }
+  });
+});
+
+
 
 
 
