@@ -165,8 +165,12 @@ a.nav-link1:hover{
 a:hover,
 ul:hover,
 li:hover,
-img:hover {
+img:hover,
+.fa-solid:hover{
     cursor: pointer; /* Hoặc bất kỳ kiểu con trỏ nào bạn muốn, ví dụ: cursor: pointer; */
+}
+.fa-solid:hover {
+  color: purple; /* Màu tím khi hover */
 }
 a.page-link{
   color: #000;
