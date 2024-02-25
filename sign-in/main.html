@@ -16,38 +16,33 @@
     
     <title>Document</title>
     <body>
-
-      <div class="container-fluid d-flex" style="align-items: center;justify-content: center;height: 100%;">
-          <div class="container" style="padding: 1rem;">
-              <h1>Biểu mẫu đăng kí</h1>
+      <div class="bg-image" style="position: relative;"></div>
+      <div class="container-fluid d-flex" style="align-items: center;justify-content: center;height: 100%;position: absolute;background-color: rgb(0,0,0);background-color: rgba(0,0,0, 0.4); color: white;font-weight: bold;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 2;">
+          <div class="container" style="padding: 1rem;z-index: 9999;">
+              <h1>Đăng Nhập</h1>
               <div class="container-fluid">
                   <form action="">
       
                       <hr>
       
                       <div class="container-fluid p-0 m-0" style="position: relative;">
-                          <label for="email"><h5>Email</h5></label>
-                          <input class="" type="text" placeholder="nhập email - số điện thoại" name="email" id="taikhoan" required style="">
-                          <p id="text-color-flase" style="position: absolute;font-size: 0.7rem;bottom: -0.8rem;display: none;">Gmail không chính xác</p>
-                          <p id="text-color-true" style="position: absolute;font-size: 0.7rem;bottom: -0.8rem;display: none;">Hợp lệ</p>
+                          <label for="email"><h5>Tài Khoản</h5></label>
+                          <input style="background-color: rgba(255, 255, 255, 0.00);
+                          border-bottom: 1px solid #ccc;" class="input" type="text" placeholder="nhập email - số điện thoại" name="email" id="taikhoan" required style="">
                       </div>
       
                       <div class="container-fluid  p-0 m-0"style="position: relative;">
                           <label for="psw"><h5>Mật Khẩu</h5></label>
-                          <input type="password" placeholder="Nhập Password" name="psw" id="psw" required>
+                          <input class="input" style=" background-color: rgba(255, 255, 255, 0.00);
+                          border-bottom: 1px solid #ccc; " type="password" placeholder="Nhập Password" name="psw" id="psw" required>
+                           <p id="text-color-flase" style="position: absolute;font-size: 0.7rem;bottom: -0.8rem;display: none;">Tài khoản hoặc mật khẩu không chính xác</p>
                       </div>
       
-                      <div class="container-fluid  p-0 m-0"style="position: relative;">
-                          <label for="psw-repeat"><h5>Nhập lại mật khẩu</h5></label>
-                          <input type="password" placeholder="Nhập lại Password" name="psw-repeat" id="psw-repeat" required>
-                          <p id="text-color-password-flase" style="position: absolute;font-size: 0.7rem;bottom: -0.8rem;display: none;color: red;">Mật khẩu nhập lại không chính xác</p>
-                          <p id="text-color-password-true" style="position: absolute;font-size: 0.7rem;bottom: -0.8rem;display: none;color: rgb(29, 224, 29);">Hợp lệ</p>
-                          <p id="text-color-password" style="position: absolute;font-size: 0.7rem;bottom: -0.8rem;display: none;color: red;">Vui lòng nhập mật khẩu</p>
-                      </div>
-                      <hr>
+                      
+                      
                       <p>Bằng cách tạo tài khoản, bạn đồng ý với <a href="#">Điều khoản & Quyền riêng tư</a>.</p>
       
-                      <button type="submit" class="registerbtn" onclick="checkBorderColors()">Đăng Kí</button>
+                      <button type="submit" class="registerbtn" onclick="checkBorderColors()">Đăng Nhập</button>
 
                   </form>
               </div>
@@ -56,126 +51,8 @@
 
 
       <!-- đk chuyển sang php -->
-      <script>
-        
-          // Kiểm tra màu của các viền
-    function checkBorderColors() {
-      const passwordInput = document.getElementById('psw');
-      const taikhoanInput = document.getElementById("taikhoan");
-      const confirmPasswordInput = document.getElementById('psw-repeat');
-    const passwordBorderColor = passwordInput.style.borderColor;
-    const confirmPasswordBorderColor = confirmPasswordInput.style.borderColor;
-    const emailBorderColor = taikhoanInput.style.borderColor;
-
-    // Nếu cả ba viền đều có màu xanh lá cây (rgb(0, 255, 0))
-    if (passwordBorderColor === "rgb(0, 255, 0)" && confirmPasswordBorderColor === "rgb(0, 255, 0)" && emailBorderColor === "rgb(0, 255, 0)") {
-        // Chuyển đến trang PHP
-        return true;
-    } else {
-        // Nếu có ít nhất một viền không có màu xanh lá cây, không thực hiện chuyển trang và hiển thị cảnh báo
-        alert("Vui lòng điền thông tin đúng và đủ trước khi đăng ký!");
-        return false;
-    }
-}
-
-      </script>
-
-
-
-      <!-- mậy khẩu -->
-      <script>
-       // Lấy các phần tử input và các phần tử thông báo từ DOM
-      const passwordInput = document.getElementById('psw');
-      const confirmPasswordInput = document.getElementById('psw-repeat');
-      const confirmPasswordtrue = document.getElementById('text-color-password-true');
-      const confirmPasswordflase = document.getElementById('text-color-password-flase');
-
-      // Định nghĩa hàm kiểm tra sự khớp nhau của mật khẩu
-      function checkPasswordMatch() {
-          const password = passwordInput.value;
-          const confirmPassword = confirmPasswordInput.value;
-          
-          if (password === confirmPassword) {
-              // Nếu mật khẩu khớp nhau, đặt màu xanh lá cây cho khung nhập liệu
-              confirmPasswordtrue.style.display = 'block'; // Ẩn thông báo lỗi
-              confirmPasswordflase.style.display = 'none'; // Hiển thị thông báo thành công
-              passwordInput.style.border = "2px solid rgb(0, 255, 0)";
-              confirmPasswordInput.style.border = "2px solid rgb(0, 255, 0)";
-            
-
-          } else {
-              // Nếu mật khẩu không khớp nhau, đặt màu đỏ cho khung nhập liệu
-              confirmPasswordtrue.style.display = 'none'; // Hiển thị thông báo lỗi
-              confirmPasswordflase.style.display = 'block'; // Ẩn thông báo thành công
-              passwordInput.style.border = "2px solid rgb(255, 0, 8)";
-              confirmPasswordInput.style.border = "2px solid rgb(255, 0, 8)";
-          }
-      }
-
-      // Gắn sự kiện blur vào input nhập lại mật khẩu để kiểm tra sự khớp nhau khi click ra khỏi input
-      confirmPasswordInput.addEventListener('blur', checkPasswordMatch);
-
-
-      </script>
-     
-    
       
-
-
-
-      <!-- phần xác thực tài khoản -->
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const taikhoanInput = document.getElementById("taikhoan");
-          const trueText = document.getElementById("text-color-true");
-          const falseText = document.getElementById("text-color-flase");
-          let prevInputValue = "";
-      
-          // Sự kiện khi người dùng nhập liệu
-          taikhoanInput.addEventListener("input", function() {
-            const inputValue = taikhoanInput.value.trim();
-            // Nếu trường nhập liệu trống và trước đó không trống
-            if (inputValue === "" && prevInputValue !== "") {
-              // Cập nhật ngay lập tức khi xóa hết nội dung
-              validateInput();
-            }
-            // Lưu trạng thái hiện tại của trường nhập liệu
-            prevInputValue = inputValue;
-          });
-      
-          // Sự kiện khi người dùng rời khỏi trường nhập liệu
-          taikhoanInput.addEventListener("blur", function() {
-            // Cập nhật style khi người dùng click ra ngoài
-            validateInput();
-          });
-      
-          // Hàm kiểm tra và cập nhật trạng thái hiển thị
-          function validateInput() {
-            const inputValue = taikhoanInput.value.trim();
-            const phoneRegex = /^\d{11}$/; // Số điện thoại bắt đầu với 0 và ít nhất 10 chữ số
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Kiểm tra định dạng email
-      
-            if (inputValue === "") {
-              taikhoanInput.style.border = "none";
-              trueText.style.display = "none";
-              falseText.style.display = "none";
-            } else {
-              if (phoneRegex.test(inputValue) || emailRegex.test(inputValue)) {
-                trueText.style.display = "block";
-                falseText.style.display = "none";
-                taikhoanInput.style.border = "2px solid rgb(0, 255, 0)";
-              } else {
-                falseText.style.display = "block";
-                trueText.style.display = "none";
-                taikhoanInput.style.border = "2px solid rgb(255, 0, 8)";
-              }
-            }
-          }
-        });
-      </script>
-      
-      
-      
+       
       
       
       
