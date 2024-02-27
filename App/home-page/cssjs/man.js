@@ -27,6 +27,11 @@ document.getElementById("on").addEventListener("click", function() {
       body.classList.remove("d-none");
     }
   }
+
+
+
+
+
   // khi thu nhỏ màn hình thì thư mục hiện lên
   window.addEventListener('resize', function() {
     if (window.innerWidth < 1200) {
@@ -37,10 +42,6 @@ document.getElementById("on").addEventListener("click", function() {
       document.getElementById('myDiv').classList.add('d-none');
     }
   });
-
-
-
-
   function checkScreenSize() {
     var commentDiv = document.getElementById("comment");
     if (window.innerWidth < 1400) {
@@ -66,63 +67,20 @@ var isWhite = true; // Biến để theo dõi trạng thái màu
 
 document.getElementById("morning-evening").addEventListener("click", function() {
     var element = document.getElementById("morning-evening");
-    var elements1 = document.querySelectorAll("[class*=time]");
-    var elements2 = document.querySelectorAll("[class*=a4]");
-    var elements3 = document.querySelectorAll("[class*=a1]");
-    var elements4 = document.querySelectorAll("[class*=span-item]");
-    var elements5 = document.querySelectorAll("[class*=page-link]");
-    var elements6 = document.querySelectorAll("[class*=name-dst]");
-    var elements7 = document.querySelectorAll("[class*=chap-dst]");
-    
-    
+    var elements = document.querySelectorAll('.text-change-color');
     if (isWhite) {
         element.style.color = "yellow"; // Nếu là trắng thì thay đổi thành màu vàng
         document.body.style.background = '#414244';
-        elements1.forEach(function(el) {
+        elements.forEach(function(el) {
             el.style.color = "#fff";
         });
-        elements2.forEach(function(el) {
-            el.style.color = "#fff";
-        });
-        elements5.forEach(function(el) {
-            el.style.color = "#252830"; // Đổi màu chữ của elements5 về màu đen
-        });
-        elements3.forEach(function(el) {
-            el.style.color = "#fff"; // Đổi màu chữ của elements3 về màu trắng
-        });
-        elements4.forEach(function(el) {
-          el.style.color = "#fff";
-        });
-        elements6.forEach(function(el) {
-          el.style.color = "#fff";
-        });
-        elements7.forEach(function(el) {
-          el.style.color = "#fff";
-        });
-
     } else {
         element.style.color = "white"; // Nếu không phải trắng thì chuyển về màu trắng
         document.body.style.background = 'white'; //Thêm dòng này để đảm bảo nền được đổi màu
-        elements1.forEach(function(el) {
+        elements.forEach(function(el) {
             el.style.color = "#252830"; 
         });
-        elements2.forEach(function(el) {
-            el.style.color = "#252830"; 
-        });
-        elements3.forEach(function(el) {
-            el.style.color = "#252830"; 
-        });
-        elements4.forEach(function(el) {
-          el.style.color = "#252830"; 
-        });
-        elements6.forEach(function(el) {
-          el.style.color = "#252830"; 
-      });
-      elements7.forEach(function(el) {
-          el.style.color = "#252830"; 
-      });
     }
-    
     isWhite = !isWhite; 
 });
 
@@ -132,12 +90,10 @@ document.getElementById("morning-evening").addEventListener("click", function() 
 document.addEventListener("DOMContentLoaded", function() {
   const theloaiButton = document.getElementById("theloai");
   const tableContainer = document.getElementById("table");
-
   // Xử lý sự kiện khi click vào #theloai
   theloaiButton.addEventListener("click", function() {
       tableContainer.classList.remove("d-none");
   });
-
   // Xử lý sự kiện khi click ra ngoài #table
   document.addEventListener("click", function(event) {
       if (!tableContainer.contains(event.target) && event.target !== theloaiButton) {
@@ -167,5 +123,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// băng chuyền
 
 
+
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}

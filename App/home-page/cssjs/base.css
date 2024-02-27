@@ -72,21 +72,6 @@ div.boder-coler-2{
 
 /* chuyển trạng thái */
 
-h3.a4{
-    color: #252830;
-}
-h5.a1{
-    color: #252830;
-}
-
-
-
-
-
-
-
-
-
  div.boder-img{ 
     border: 1px solid #FFF;;
 }
@@ -95,4 +80,26 @@ h5.a1{
 div.swiper-slide{
     border: 1px solid #fff;
 }   
+.accordion {
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    background-color: rgb(27, 25, 25);
+  }
+  .accordion:hover{
+    color: chocolate;
+  }
+
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
 
