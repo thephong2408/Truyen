@@ -48,6 +48,7 @@ div.img-tren{
 }
 div.img-duoi{
     background-color: var(--img-duoi);
+    position: absolute;bottom: 0;height: 2rem;width: 100%;color: aliceblue;
 }
 div.q:hover{
     background-color: var(--nav);
@@ -103,22 +104,31 @@ div.swiper-slide{
     display: none;
     overflow: hidden;
   }
+
+
+
+
+
   /* tích hợp màn hình  */
-  @media screen and (max-width: 1400px) {
-    /* CSS cho màn hình lớn */
-    /* #comment {
-        display: none;
-    } */
-    #list{
-      width: 100%;
+
+
+
+
+  @media screen and (max-width: 600px) {
+    div.gird-container1{
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        gap: 1rem;
+      }
+  }
+  @media screen and (max-width: 800px) {
+    div.gird-container1{
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
     }
-    #men{
-      display: none;
-    }
-    #girl{
-      display: none;
-    }
-   
   }
   @media screen and (max-width: 1200px) {
     /* CSS cho màn hình lớn */ 
@@ -140,22 +150,6 @@ div.swiper-slide{
     
   }
   
-  @media screen and (max-width: 800px) {
-    div.gird-container1{
-        display: grid;
-        align-items: center;
-        grid-template-columns: auto auto auto;
-        gap: 1rem;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    div.gird-container1{
-        display: grid;
-        align-items: center;
-        grid-template-columns: auto auto auto;
-        gap: 1rem;
-      }
-  }
   div.gird-container{
     display: grid;
     display: flex;

@@ -5,6 +5,7 @@ body {
 }
 
 body {
+
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -104,15 +105,12 @@ div.gird-test{
   text-align: center;
 }
 div.gird-test1{
-  max-width: 9rem;
+  /* min-width: 10rem; */
+
 }
 div.gird-test{
   text-align: center;
 }
-div.gird-test1{
-  max-width: 13rem;
-}
-
 a.text-folder{
   color: #fff;
 }
