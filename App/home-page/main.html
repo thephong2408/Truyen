@@ -22,13 +22,13 @@
 
   <!-- tiêu đề  -->
   <header id="header" style="background-color: red;">
-    <div class="gird-container">
-      <div class="gird-test d-flex align-items-center" style="border: none;"> 
+    <div class="gird-container header__gird-container">
+      <div class="header__item d-flex align-items-center"> 
         <img alt="Logo NetTruyen" src="//st.nettruyenss.com/data/logos/logo-nettruyen.png" width="250" style="aspect-ratio:5">
         <i id="morning-evening" class="fa-solid fa-lightbulb"></i>
       </div>
       <!-- tìm kiếm -->
-      <div class="gird-test" id="" style="width: 50%;">
+      <div class="header__item header__item--search" id="">
         <form action="">
         <div class="input-group" id="search" style="width: 100%;">
           <input id=""  style="font-size: var(--font-size-xsm);border: none;" type="text" class="form-control" placeholder="Tên Truyện" name="usrname">
@@ -37,8 +37,8 @@
         </form>
       </div>
       <!-- đăng kí đăng nhập -->
-      <div class=" gird-test sign-in-on">
-        <li class="nav-item d-flex input " style="font-size: 1.2rem;">
+      <div class=" header__item sign-in-on">
+        <li class="nav-item d-flex " style="font-size: 1.2rem;">
           <a class="nav-link" href="#">Đăng Kí </a>
           <a class="nav-link mx-2" href="#">/</a>
           <a class="nav-link" href="#">Đăng Nhập</a>
@@ -50,8 +50,8 @@
         </li>  
       </div>
       <!-- mục lục -->
-      <div class="gird-test list-list d-none p-0 m-0 d-flex justify-content-center " id="myDiv" style="background-color: rgb(240, 205, 7);min-width: 60px;height: 3rem;border-radius: 2px;">
-        <li class="nav-item d-flex input " style="font-size: 2rem;color: aliceblue;">
+      <div class="header__item list-list d-none p-0 m-0 d-flex justify-content-center " id="myDiv" style="background-color: rgb(240, 205, 7);min-width: 60px;height: 3rem;border-radius: 2px;">
+        <li class="nav-item d-flex " style="font-size: 2rem;color: aliceblue;">
           <a class="nav-link" href="#">
             <i class="fa-solid fa-bars" id="on"></i>
             <i class="fa-solid fa-xmark d-none" id="out"></i>
@@ -64,27 +64,28 @@
 
 
     <!-- Tìm kiếm theo yêu cầu -->
-    <div class="container-fluid default p-0 " id="" >
+    <div class="container-fluid default p-0 " id="danhsach-timkiem" >
       <nav class=" navbar navbar-expand-sm bg-dark navbar-dark p-0">
           <div class="search p-0 container-fluid d-flex justify-content-between align-items-center" style="background-color: var(--light-color-alt)">
             <!-- các yêu cầu cho trước -->
             <ul class="navbar-nav" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="width: 3rem;">
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" style="width: 3rem;">
                 <i class="fa-solid fa-house"></i>
               </div>
             </ul>
             <ul class="navbar-nav w-100" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" >HOT</div>
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" >HOT</div>
             </ul> 
             <ul class="navbar-nav w-100" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" >THEO DÕI</div>
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" >THEO DÕI</div>
             </ul> 
             <ul class="navbar-nav w-100" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" >LỊCH SỬ</div>
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" >LỊCH SỬ</div>
             </ul> 
             <ul class="navbar-nav w-100" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style="position: relative; ;"><span id="theloai">THỂ LOẠI <i class="icon-left fa-solid fa-table-cells"></i></span>
-                <div id="table" class="container p-0 ml-0 d-none">
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" style="position: relative; ;">
+                <span id="category">THỂ LOẠI <i class="icon-left fa-solid fa-table-cells"></i></span>
+                <div id="table-category" class="container p-0 ml-0 d-none">
                   <table class="table table-borderless mb-2 table-category">
                     <tbody>
                       <tr>
@@ -111,12 +112,12 @@
               </div>
             </ul> 
             <ul class="navbar-nav w-100" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" style=" position: relative;">
-                <span id="xephang">XẾP HẠNG 
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" style=" position: relative;">
+                <span id="rank">XẾP HẠNG 
                   <i class="icon-left fa-solid fa-sort"></i>
                 </span>
-                <div id="" class="container p-0 ml-0 table-rank">
-                  <table class="table table-bordered d-none" id="table1">
+                <div id="" class="container p-0 ml-0 table__rank">
+                  <table class="table table-bordered d-none" id="table__rank">
                     <tbody>
                       <tr>
                         <td>John</td>
@@ -136,16 +137,16 @@
               </div>
             </ul> 
             <ul class="navbar-nav w-100" >
-              <div class="q container-fluid button d-flex  align-items-center justify-content-center border-end" >TÌM TRUYỆN</div>
+              <div class="navbar__nav--list container-fluid button d-flex  align-items-center justify-content-center border-end" >TÌM TRUYỆN</div>
             </ul> 
             <ul class="navbar-nav w-100" id="girl" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" >TRUYỆN CON GÁI</div>
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" >TRUYỆN CON GÁI</div>
             </ul> 
             <ul class="navbar-nav w-100" id="men" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center border-end" >TRUYỆN CON TRAI</div>
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center border-end" >TRUYỆN CON TRAI</div>
             </ul> 
-            <ul class="navbar-nav w-100" >
-              <div class="q container-fluid button d-flex align-items-center justify-content-center " >TRUYỆN CHỮ HAY</div>
+            <ul class="navbar-nav w-100" id="truyen-chu" >
+              <div class="navbar__nav--list container-fluid button d-flex align-items-center justify-content-center " >TRUYỆN CHỮ HAY</div>
             </ul>          
           </div>     
       </nav>
@@ -159,7 +160,7 @@
    <body class="" id="" >
     <div class="container-fulid d-none " id="offcanvas" style="background-color: rgb(27, 25, 25);height: 100%;">
         <div class="container-fluid">
-          <div class="gird-test  pt-2"><form action="">
+          <div class="gird-test pt-2"><form action="">
             <div class="input-group" style="width: 100%;">
               <input style="font-size: var(--font-size-xsm);border: none;" type="text" class="form-control" placeholder="Tên Truyện" name="usrname">
               <span class="input-group-text"><i style="font-size: var(--font-size-sm);" class="fa-solid fa-magnifying-glass"></i></span>
@@ -171,29 +172,29 @@
             <button class="accordion">HOT</button>
             <button class="accordion">LỊCH SỬ</button>
             <button class="accordion">THỂ LOẠI <i style="margin-left: 0.2rem;" class="fa-solid fa-table-cells"></i></button>
-            <div class="panel panel-panel container-fluid p-0 m-0">
+            <div class="table__accordion table__accordion--category container-fluid p-0 m-0">
               <table class="table table-borderless">
                 
                 <tbody>
                   <tr>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
                     
                   </tr>
                   <tr>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
                     
                   </tr>
                   <tr>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
-                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="theloai-text-background">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
+                    <td style="background-color: rgb(27, 25, 25);color: #FFF;" class="accordion__category">thể loại</td>
                     
                   </tr>
                 </tbody>
@@ -201,24 +202,24 @@
             </div>
 
             <button class="accordion">XẾP HẠNG  <i style="margin-left: 0.2rem;" class="fa-solid fa-sort"></i></button>
-            <div class="panel container-fluid p-0 m-0">
+            <div class="table__accordion table__accordion--rank container-fluid p-0 m-0">
               <table class="table table-bordered" style="width: 100%;">
                 <tbody>
                   <tr>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> John</td>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Doe</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> John</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Doe</td>
                   </tr>
                   <tr>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Mary</td>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Moe</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Mary</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Moe</td>
                   </tr>
                   <tr>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> July</td>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Dooley</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> July</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Dooley</td>
                   </tr>
                   <tr>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> July</td>
-                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Dooley</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> July</td>
+                    <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="accordion__rank"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> Dooley</td>
                   </tr>
                   <tr>
                     <td style="text-align: center;color: #FFF;background-color: rgb(27, 25, 25);" class="xephang-text-background"> <i class="fa-solid fa-user" style="margin-right: 0.2rem;"></i> July</td>
@@ -248,22 +249,21 @@
       <div class="container-fluid mt-3">
         <h3 class="text-change-color">Đề cử truyện <i class="fa-solid fa-terminal"></i></h3>
 
-        <div class="swiper" style="min-height: 12rem;">
+        <div class="swiper">
         
           <div class="swiper-wrapper">
-
               <!-- Từng ảnh -->
             <div class="swiper-slide m-2">
               <div class="img_box">
                 <img style="z-index: 1;" src="./cssjs/img/anh1.jpg" alt="">
                 <!-- thông tin truyện -->
-                <div class="container-fluid img-tren">
-                    <div class="swiper-img">
-                        <h5 class="swiper-img-name">Name</h5>
-                        <ul class="navbar-nav swiper-navbar-nav">
+                <div class="container-fluid swiper-slide--information ">
+                    <div class="swiper__slide--img">
+                        <h5 class="swiper__slide--img-name">Name</h5>
+                        <ul class="navbar-nav swiper__slide--navbar-nav">
                           <li class="nav-item d-flex justify-content-between align-items-center">
-                            <a class="nav-link swiper-chap" href="#">Chap 1</a>
-                            <a class="nav-link swiper-time" href="#">29 phút trước</a>
+                            <a class="nav-link swiper__slide--chap" href="#">Chap 1</a>
+                            <a class="nav-link swiper__slide--time" href="#">29 phút trước</a>
                           </li>
                         </ul>
                     </div>
@@ -296,17 +296,17 @@
           <h3 class="text-change-color">Danh sách truyện <i class="fa-solid fa-terminal"></i></h3>
           <!-- danh sách truyện -->
 
-          <div id="list" class="col-9 d-flex mt-3" style="flex-wrap: wrap;justify-content: space-between;">
+          <div id="list" class="col-9 d-flex mt-3">
             <div class="container-fluid">
-              <div class="gird-container1" >
+              <div class=" comic__list container-fluid p-0 m-0 ">
 
                 <!-- Tùng truyện -->
-                <div class="gird-test1" style="position: relative;">
-                  <div class="boder-img container-fluid p-0" style="position: relative;">
+                <div style="position: relative;">
+                  <div class="comic__img container-fluid p-0" style="position: relative;">
                     <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
                     
                     <!-- thông tin của truyện về lượt xem ... -->
-                    <div class="container img-duoi d-flex align-items-center" >
+                    <div class="container comic__img--information d-flex align-items-center" >
                       <span><i class="fa-solid fa-eye"></i></span>
                       <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
                       <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
@@ -314,96 +314,120 @@
                     </div>
                   </div>
                     <div class="card-body p-0" style="position: relative;">
-                      <h5 class="card-title text-change-color pt-3 name-dst">John Doe</h5>
+                      <h5 class="comic__name text-change-color pt-3">John Doe</h5>
                       <!-- chap truyện -->
                       <nav class="nav d-flex">
-                        <ul class="navbar-nav" style="display: flex;justify-content:space-between;">
+                        <ul class="navbar-nav information">
                           <li class="nav-item d-flex justify-content-between align-items-center">
-                            <a class="nav-link text-change-color chap chap-dst" href="#">Chap 1</a>
-                            <a class="nav-link time text-change-color" style="position: absolute;right: 0;" href="#">29 phút trước</a>
+                            <a class="nav-link text-change-color information__chap" href="#">Chap 1</a>
+                            <a class="nav-link text-change-color information__time" style="position: absolute;right: 0;" href="#">29 phút trước</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                  <div class="comic__img container-fluid p-0" style="position: relative;">
+                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
+                    
+                    <!-- thông tin của truyện về lượt xem ... -->
+                    <div class="container comic__img--information d-flex align-items-center" >
+                      <span><i class="fa-solid fa-eye"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
+  
+                    </div>
+                  </div>
+                    <div class="card-body p-0" style="position: relative;">
+                      <h5 class="comic__name text-change-color pt-3">John Doe</h5>
+                      <!-- chap truyện -->
+                      <nav class="nav d-flex">
+                        <ul class="navbar-nav information">
+                          <li class="nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link text-change-color information__chap" href="#">Chap 1</a>
+                            <a class="nav-link text-change-color information__time" style="position: absolute;right: 0;" href="#">29 phút trước</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                  <div class="comic__img container-fluid p-0" style="position: relative;">
+                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
+                    
+                    <!-- thông tin của truyện về lượt xem ... -->
+                    <div class="container comic__img--information d-flex align-items-center" >
+                      <span><i class="fa-solid fa-eye"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
+  
+                    </div>
+                  </div>
+                    <div class="card-body p-0" style="position: relative;">
+                      <h5 class="comic__name text-change-color pt-3">John Doe</h5>
+                      <!-- chap truyện -->
+                      <nav class="nav d-flex">
+                        <ul class="navbar-nav information">
+                          <li class="nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link text-change-color information__chap" href="#">Chap 1</a>
+                            <a class="nav-link text-change-color information__time" style="position: absolute;right: 0;" href="#">29 phút trước</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                  <div class="comic__img container-fluid p-0" style="position: relative;">
+                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
+                    
+                    <!-- thông tin của truyện về lượt xem ... -->
+                    <div class="container comic__img--information d-flex align-items-center" >
+                      <span><i class="fa-solid fa-eye"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
+  
+                    </div>
+                  </div>
+                    <div class="card-body p-0" style="position: relative;">
+                      <h5 class="comic__name text-change-color pt-3">John Doe</h5>
+                      <!-- chap truyện -->
+                      <nav class="nav d-flex">
+                        <ul class="navbar-nav information">
+                          <li class="nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link text-change-color information__chap" href="#">Chap 1</a>
+                            <a class="nav-link text-change-color information__time" style="position: absolute;right: 0;" href="#">29 phút trước</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                  <div class="comic__img container-fluid p-0" style="position: relative;">
+                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
+                    
+                    <!-- thông tin của truyện về lượt xem ... -->
+                    <div class="container comic__img--information d-flex align-items-center" >
+                      <span><i class="fa-solid fa-eye"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
+                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
+  
+                    </div>
+                  </div>
+                    <div class="card-body p-0" style="position: relative;">
+                      <h5 class="comic__name text-change-color pt-3">John Doe</h5>
+                      <!-- chap truyện -->
+                      <nav class="nav d-flex">
+                        <ul class="navbar-nav information">
+                          <li class="nav-item d-flex justify-content-between align-items-center">
+                            <a class="nav-link text-change-color information__chap" href="#">Chap 1</a>
+                            <a class="nav-link text-change-color information__time" style="position: absolute;right: 0;" href="#">29 phút trước</a>
                           </li>
                         </ul>
                       </nav>
                     </div>
                 </div>
                 <!-- Tùng truyện -->
-                <div class="gird-test1" style="position: relative;">
-                  <div class="boder-img container-fluid p-0" style="position: relative;">
-                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
-                    
-                    <!-- thông tin của truyện về lượt xem ... -->
-                    <div class="container img-duoi d-flex align-items-center" >
-                      <span><i class="fa-solid fa-eye"></i></span>
-                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
-                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
-  
-                    </div>
-                  </div>
-                    <div class="card-body p-0" style="position: relative;">
-                      <h5 class="card-title text-change-color pt-3 name-dst">John Doe</h5>
-                      <!-- chap truyện -->
-                      <nav class="nav d-flex">
-                        <ul class="navbar-nav" style="display: flex;justify-content:space-between;">
-                          <li class="nav-item d-flex justify-content-between align-items-center">
-                            <a class="nav-link text-change-color chap chap-dst" href="#">Chap 1</a>
-                            <a class="nav-link time text-change-color" style="position: absolute;right: 0;" href="#">29 phút trước</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                </div>
-                <!-- Tùng truyện -->
-                <div class="gird-test1" style="position: relative;">
-                  <div class="boder-img container-fluid p-0" style="position: relative;">
-                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
-                    
-                    <!-- thông tin của truyện về lượt xem ... -->
-                    <div class="container img-duoi d-flex align-items-center" >
-                      <span><i class="fa-solid fa-eye"></i></span>
-                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
-                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
-  
-                    </div>
-                  </div>
-                    <div class="card-body p-0" style="position: relative;">
-                      <h5 class="card-title text-change-color pt-3 name-dst">John Doe</h5>
-                      <!-- chap truyện -->
-                      <nav class="nav d-flex">
-                        <ul class="navbar-nav" style="display: flex;justify-content:space-between;">
-                          <li class="nav-item d-flex justify-content-between align-items-center">
-                            <a class="nav-link text-change-color chap chap-dst" href="#">Chap 1</a>
-                            <a class="nav-link time text-change-color" style="position: absolute;right: 0;" href="#">29 phút trước</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                </div>
-                <!-- Tùng truyện -->
-                <div class="gird-test1" style="position: relative;">
-                  <div class="boder-img container-fluid p-0" style="position: relative;">
-                    <img src="./cssjs/img/anh1.jpg" alt="" style="width:100%;display: block; ">
-                    
-                    <!-- thông tin của truyện về lượt xem ... -->
-                    <div class="container img-duoi d-flex align-items-center" >
-                      <span><i class="fa-solid fa-eye"></i></span>
-                      <span style="margin-left: 1rem;"><i class="fa-solid fa-comment"></i></span>
-                      <span style="margin-left: 1rem;"><i class="fa-solid fa-heart"></i></span>
-  
-                    </div>
-                  </div>
-                    <div class="card-body p-0" style="position: relative;">
-                      <h5 class="card-title text-change-color pt-3 name-dst">John Doe</h5>
-                      <!-- chap truyện -->
-                      <nav class="nav d-flex">
-                        <ul class="navbar-nav" style="display: flex;justify-content:space-between;">
-                          <li class="nav-item d-flex justify-content-between align-items-center">
-                            <a class="nav-link text-change-color chap chap-dst" href="#">Chap 1</a>
-                            <a class="nav-link time text-change-color" style="position: absolute;right: 0;" href="#">29 phút trước</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                </div>
+               
                  
                 
                 <!-- thêm các truyện -->
@@ -438,23 +462,29 @@
 
           <!-- bình luận -->
           <div id="comment" class="col-3  text-white" style="height: fit-content;">
+
+
               <!-- Lịch sử dọc truyện -->
-              <div class="container-fluid  boder-coler-2" >
-                <div class="container p-2 container-boder1" >
+              <div class="container-fluid  boder" >
+                <div class="container p-2 boder-top" >
                   <ul class="nav flex-column" >
-                      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                      
                         <li class="nav-item">
-                          <h5 class="a1 text-change-color" style="font-size: 1rem;">Lịch sử đọc truyện</h5>
+                          <h5 class=" text-change-color" style="font-size: 1rem;">Lịch sử đọc truyện</h5>
                         </li>
                         <li class="nav-item">
                           <span class = "span-item text-change-color" >xem tất cả</span>
                         </li>
-                      </div>
+                      
                   </ul>
                 </div>
+
+
                 <!-- danh sách các truyện -->
                 <div class="container-fluid my-3" style="max-height: 20rem;overflow: auto;">
                   <ul class="nav flex-column " style="margin-top: 1rem;">
+
+
                     <!-- từng truyện -->
                     <li class="nav-item">
                       <div class=" container-fluid d-flex align-items-center p-0" style="background-color: #FFF;color: black;">
@@ -490,19 +520,21 @@
 
 
               <!-- Top thành viên -->
-              <div class="container-fluid mt-5  boder-coler-2" >
-                <div class="container p-2 container-boder1" >
+              <div class="container-fluid mt-5  boder" >
+                <div class="container p-2 boder-top" >
                   <ul class="nav flex-column" >
-                      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
                         <li class="nav-item">
-                          <h5 class="a1 text-change-color" style="font-size: 1rem;">Top các thành viên</h5>
+                          <h5 class=" text-change-color" style="font-size: 1rem;">Top các thành viên</h5>
                         </li>
-                      </div>
                   </ul>
                 </div>
+
+
                 <!-- danh sách các truyện -->
                 <div class="container-fluid my-3" style="max-height: 20rem;overflow: auto;">
                   <ul class="nav flex-column " style="margin-top: 1rem;">
+
+
                     <!-- từng truyện -->
                     <li class="nav-item">
                       <div class=" container-fluid d-flex align-items-center p-0" style="background-color: #FFF;color: black;">
@@ -531,6 +563,8 @@
                           </div>
                       </div>
                     </li>
+
+
                     <!-- thêm các truyện -->
                   </ul>
                 </div>
@@ -541,22 +575,24 @@
 
 
               <!-- Top truyện -->
-              <div class="container-fluid mt-5  boder-coler-2" >
-                <div class="container p-2 container-boder1" >
+              <div class="container-fluid mt-5  boder" >
+                <div class="container p-2 boder-top" >
                   <ul class="nav flex-column" >
-                      <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
                         <li class="nav-item">
-                          <h5 class="a1 text-change-color" style="font-size: 1rem;">Top truyện</h5>
+                          <h5 class=" text-change-color" style="font-size: 1rem;">Top truyện</h5>
                         </li>
                         <li class="nav-item">
                           <span class = "span-item text-change-color" >xem tất cả</span>
                         </li>
-                      </div>
                   </ul>
                 </div>
+
+
                 <!-- danh sách các truyện -->
                 <div class="container-fluid my-3" style="max-height: 20rem;overflow: auto;">
                   <ul class="nav flex-column " style="margin-top: 1rem;">
+
+
                     <!-- từng truyện -->
                     <li class="nav-item">
                       <div class=" container-fluid d-flex align-items-center p-0" style="background-color: #FFF;color: black;">
@@ -585,6 +621,8 @@
                           </div>
                       </div>
                     </li>
+
+
                     <!-- thêm các truyện -->
                   </ul>
                 </div>
@@ -595,12 +633,12 @@
 
 
               <!-- Bình luận -->
-              <div class="container-fluid my-5 boder-coler-2" >
-                <div class="container p-2 container-boder1" >
+              <div class="container-fluid my-5 boder" >
+                <div class="container p-2 boder-top" >
                   <ul class="nav flex-column" >
                       <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
                         <li class="nav-item">
-                          <h5 class="a1 text-change-color" style="font-size: 1rem;">Lịch sử đọc truyện</h5>
+                          <h5 class=" text-change-color" style="font-size: 1rem;">Bình luận</h5>
                         </li>
                         <li class="nav-item">
                           <span class = "span-item text-change-color" >xem tất cả</span>
@@ -608,9 +646,13 @@
                       </div>
                   </ul>
                 </div>
+
+
                 <!-- danh sách các truyện -->
                 <div class="container-fluid my-3" style="max-height: 20rem;">
                   <ul class="nav flex-column " style="margin-top: 1rem;">
+
+
                     <!-- từng truyện -->
                     <div class="container-fluid">
                       <div class="row">
@@ -632,6 +674,8 @@
                         </div>
                       </div>
                     </div>
+
+
                     <!-- thêm các truyện -->
                   </ul>
                 </div>
@@ -654,17 +698,12 @@
      </body>
      
   
-     <style>
-      /* Custom CSS */
-      
-      
-    </style>
-  </head>
+     
   <body>
     
     <!-- Phần kết thúc -->
     <footer>
-        
+      
     </footer>
   
   

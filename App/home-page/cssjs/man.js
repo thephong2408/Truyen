@@ -88,8 +88,8 @@ document.getElementById("morning-evening").addEventListener("click", function() 
 
 // bảng ở thể loại
 document.addEventListener("DOMContentLoaded", function() {
-  const theloaiButton = document.getElementById("theloai");
-  const tableContainer = document.getElementById("table");
+  const theloaiButton = document.getElementById("category");
+  const tableContainer = document.getElementById("table-category");
   // Xử lý sự kiện khi click vào #theloai
   theloaiButton.addEventListener("click", function() {
       tableContainer.classList.remove("d-none");
@@ -105,8 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // bảng xếp hạng
 document.addEventListener("DOMContentLoaded", function() {
-  const theloaiButton = document.getElementById("xephang");
-  const tableContainer = document.getElementById("table1");
+  const theloaiButton = document.getElementById("rank");
+  const tableContainer = document.getElementById("table__rank");
 
   // Xử lý sự kiện khi click vào #theloai
   theloaiButton.addEventListener("click", function() {
