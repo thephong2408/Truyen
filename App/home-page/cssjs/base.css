@@ -53,6 +53,9 @@ div.q:hover{
     background-color: var(--nav);
     color: #a767e5;
 }
+div.q{
+    height: 3rem; 
+}
 div.gird-test:hover{
     color: #a767e5;
 }
@@ -95,11 +98,78 @@ div.swiper-slide{
   .accordion:hover{
     color: chocolate;
   }
-
-  
   .panel {
     padding: 0 18px;
     display: none;
     overflow: hidden;
   }
+  /* tích hợp màn hình  */
+  @media screen and (max-width: 1400px) {
+    /* CSS cho màn hình lớn */
+    /* #comment {
+        display: none;
+    } */
+    #list{
+      width: 100%;
+    }
+    #men{
+      display: none;
+    }
+    #girl{
+      display: none;
+    }
+   
+  }
+  @media screen and (max-width: 1200px) {
+    /* CSS cho màn hình lớn */ 
+    div.default{
+      display: none;
+    }
+    div.sign-in-on{
+      display: none;
+    }
+    div.list-list{
+      display: block;
+    }
+    div.gird-container1{
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+      }
+    
+  }
+  
+  @media screen and (max-width: 800px) {
+    div.gird-container1{
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    div.gird-container1{
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+      }
+  }
+  div.gird-container{
+    display: grid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  div.gird-container1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+  }
+  
 

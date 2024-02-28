@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/* thư viện swiper */
 .swiper {
     width: 100%;
     height: 100%;
@@ -56,9 +56,8 @@ body {
     margin: 0 10px;
     font-size: 13px;
   }
-  .img_box {
-    height: 100%;
-}
+
+/* css khung truyện */
 a.time{
   font-size: 0.8rem;
   color: var(--light-color-alt);
@@ -69,9 +68,10 @@ a.chap{
 a.time1{
   font-size: 0.9rem;
 }
-a.chap1{
+a.swiper-chap{
   font-size: 1rem;
 }
+
 h5.card-title{
   font-size: 1rem;
 }
@@ -79,12 +79,13 @@ h5.card-title{
 .d-none{
   display: none;
 }
+/* hover  */
 a:hover,
 ul:hover,
 li:hover,
 img:hover,
 .fa-solid:hover{
-    cursor: pointer; /* Hoặc bất kỳ kiểu con trỏ nào bạn muốn, ví dụ: cursor: pointer; */
+  cursor: pointer; /* Hoặc bất kỳ kiểu con trỏ nào bạn muốn, ví dụ: cursor: pointer; */
 }
 .fa-solid:hover {
   color: purple; /* Màu tím khi hover */
@@ -98,76 +99,12 @@ h5.text-change-color{
 h3.text-change-color{
   color: var(--secondary-background-color);
 }
-@media screen and (max-width: 1400px) {
-  /* CSS cho màn hình lớn */
-  /* #comment {
-      display: none;
-  } */
-  #list{
-    width: 100%;
-  }
-  #men{
-    display: none;
-  }
-  #girl{
-    display: none;
-  }
- 
-}
-@media screen and (max-width: 1200px) {
-  /* CSS cho màn hình lớn */ 
-  div.default{
-    display: none;
-  }
-  div.sign-in-on{
-    display: none;
-  }
-  div.list-list{
-    display: block;
-  }
-  
-}
-
-@media screen and (max-width: 800px) {
-  div.gird-container1{
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
-    
-  }
-}
-@media screen and (max-width: 600px) {
-  div.gird-container1{
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto auto;
-    gap: 1rem;
-    
-  }
-}
-div.gird-container{
-  display: grid;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  grid-template-columns: auto auto auto;
-  gap: 1rem;
-  background-color:red;
-  padding: 1rem;
-}
+/* gird - lưới*/
 div.gird-test{
   text-align: center;
 }
 div.gird-test1{
   max-width: 9rem;
-}
-div.gird-container1{
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto auto auto auto;
-  gap: 1rem;
-  
 }
 div.gird-test{
   text-align: center;
@@ -179,6 +116,8 @@ div.gird-test1{
 a.text-folder{
   color: #fff;
 }
+
+
 /* màu phần thư mục */
 a.text-folder:hover{
   color: chocolate;
@@ -195,6 +134,95 @@ td.theloai-text-background{
   color: #000;
 }
 
-td.theloai-text-background {
-  color: cornflowerblue;
+
+
+
+/* icon */
+.icon-left{
+  margin-left: 0.2rem;
+}
+#morning-evening{
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  color: #fff;
+}
+i.fa-magnifying-glass{
+  font-size: var(--font-size-sm);
+}
+
+/* table */
+#table{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: fit-content;
+  border: none;margin-top: 3rem;
+}
+table.table-category{
+  border: 1px solid var(--light-color-alt);
+  box-shadow: 1px 1px 1px 1px var(--light-color-alt)
+}
+div.table-rank{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: fit-content;
+  border: none;
+  margin-top: 3rem;
+}
+div.panel-panel{
+  border-top:1px solid #fff;
+}
+
+/* img */
+.img_box {
+  height: 100%;
+}
+img#avt{
+  border-radius: 50%;
+  width: 3rem;
+}
+#name-avt{
+  margin-left: 2rem;font-size: 1.2rem;
+}
+div.img_box{
+  position: relative;height: 96.7%;
+}
+div.img-tren{
+  position: absolute;
+  height: 4rem;
+  z-index: 5;
+  bottom: 0rem;
+  color: aliceblue;
+}
+
+
+/* tiêu đề lớn */
+
+/* swiper */
+div.swiper-img{
+  position: relative;
+}
+h5.swiper-img-name{
+  position: absolute;
+}
+ul.swiper-navbar-nav{
+  padding-top: 1.2rem;
+}
+a.swiper-chap{
+  
+}
+a.swiper-time{
+  position: absolute;
+  right: 0;
+}
+
+
+
+/* danh sách truyện */
+#list{
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
